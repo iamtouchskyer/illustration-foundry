@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128">
+  <ellipse cx="64" cy="104" rx="24" ry="5" fill="#2b2b3a" opacity="0.08"/>
+  <g transform="rotate(5 64 66)">
+    <rect x="44" y="43" width="40" height="46" rx="4" fill="#eaf4ec"/>
+  </g>
+  <rect x="39" y="32" width="42" height="48" rx="4" fill="#ffffff"/>
+  <line x1="46" y1="46" x2="70" y2="46" stroke="#eaf4ec" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="46" y1="54" x2="70" y2="54" stroke="#eaf4ec" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="46" y1="62" x2="70" y2="62" stroke="#eaf4ec" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="81" y1="67" x2="103" y2="89" stroke="#3ba55d" fill="none" stroke-width="8" stroke-linecap="round"/>
+  <line x1="103" y1="67" x2="81" y2="89" stroke="#3ba55d" fill="none" stroke-width="8" stroke-linecap="round"/>
+</svg>

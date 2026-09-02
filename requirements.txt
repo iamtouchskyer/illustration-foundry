@@ -1,0 +1,3 @@
+rembg>=2.0.50
+pymatting>=1.1.12
+pillow>=10.0.0

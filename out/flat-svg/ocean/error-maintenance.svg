@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128">
+  <ellipse cx="64" cy="104" rx="26" ry="5" fill="#2b2b3a" opacity="0.08"/>
+  <line x1="88" y1="74" x2="96" y2="74" stroke="#e8f1fa" fill="none" stroke-width="9" stroke-linecap="round"/>
+  <line x1="83.31" y1="85.31" x2="88.97" y2="90.97" stroke="#e8f1fa" fill="none" stroke-width="9" stroke-linecap="round"/>
+  <line x1="72" y1="90" x2="72" y2="98" stroke="#e8f1fa" fill="none" stroke-width="9" stroke-linecap="round"/>
+  <line x1="60.69" y1="85.31" x2="55.03" y2="90.97" stroke="#e8f1fa" fill="none" stroke-width="9" stroke-linecap="round"/>
+  <line x1="56" y1="74" x2="48" y2="74" stroke="#e8f1fa" fill="none" stroke-width="9" stroke-linecap="round"/>
+  <line x1="60.69" y1="62.69" x2="55.03" y2="57.03" stroke="#e8f1fa" fill="none" stroke-width="9" stroke-linecap="round"/>
+  <line x1="72" y1="58" x2="72" y2="50" stroke="#e8f1fa" fill="none" stroke-width="9" stroke-linecap="round"/>
+  <line x1="83.31" y1="62.69" x2="88.97" y2="57.03" stroke="#e8f1fa" fill="none" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="72" cy="74" r="18" fill="#e8f1fa"/>
+  <circle cx="72" cy="74" r="7.56" fill="#ffffff"/>
+  <g transform="translate(36 30)">
+    <line x1="0" y1="0" x2="34" y2="34" stroke="#2f7cf6" fill="none" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="-2" cy="-2" r="9" fill="#2f7cf6"/>
+    <circle cx="-2" cy="-2" r="4" fill="#ffffff"/>
+  </g>
+  <g transform="translate(36 66)">
+    <line x1="0" y1="0" x2="30" y2="-30" stroke="#6cc4f0" fill="none" stroke-width="6" stroke-linecap="round"/>
+    <rect x="26" y="-38" width="12" height="10" rx="3" fill="#2f7cf6"/>
+  </g>
+  <polygon points="100,62 114,92 86,92" fill="#ff8f6b"/>
+  <rect x="94" y="82" width="12" height="10" fill="#ff8f6b"/>
+</svg>

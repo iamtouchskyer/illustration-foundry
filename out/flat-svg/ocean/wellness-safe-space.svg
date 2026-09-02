@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128">
+  <ellipse cx="64" cy="104" rx="28" ry="5" fill="#2b2b3a" opacity="0.08"/>
+  <rect x="38" y="56" width="52" height="36" rx="4" fill="#2f7cf6"/>
+  <polygon points="32,58 64,28 96,58" fill="#6cc4f0"/>
+  <circle cx="64" cy="78" r="11" fill="#e8f1fa"/>
+  <path d="M64 103.6 C57.35 99.05 56.65 93.8 60.5 93.45 C62.95 93.1 64 95.55 64 96.95 C64 95.55 65.05 93.1 67.5 93.45 C71.35 93.8 70.65 99.05 64 103.6 Z" fill="#ff8f6b"/>
+</svg>

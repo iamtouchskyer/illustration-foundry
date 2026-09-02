@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128">
+  <ellipse cx="64" cy="104" rx="26" ry="5" fill="#2b2b3a" opacity="0.08"/>
+  <ellipse cx="64" cy="88" rx="32" ry="8" fill="#e6e6f5"/>
+  <path d="M64 44 Q80.2 62 64 80 Q47.8 62 64 44 Z" fill="#ff6b35"/>
+  <g transform="rotate(-32 48 66)">
+    <path d="M48 51 Q61.5 66 48 81 Q34.5 66 48 51 Z" fill="#ffa55c"/>
+  </g>
+  <g transform="rotate(32 80 66)">
+    <path d="M80 51 Q93.5 66 80 81 Q66.5 66 80 51 Z" fill="#ffa55c"/>
+  </g>
+  <polygon points="96,29 97.1,32.9 101,34 97.1,35.1 96,39 94.9,35.1 91,34 94.9,32.9" fill="#a984ff"/>
+</svg>

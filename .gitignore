@@ -1,0 +1,9 @@
+# clay-png/ and flat-svg/ ARE the shipped product and are committed.
+# clay-svg/ is excluded: it is a byte-identical pure derivation of clay-png
+# (deterministic script + --check gate), so regenerate on demand instead of
+# committing ~600MB of duplicates:
+#   python3 scripts/make_svg_wrappers.py
+out/clay-svg/
+__pycache__/
+*.pyc
+.venv/
