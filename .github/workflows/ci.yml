@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pillow (wrapper script dependency)
+        run: pip install pillow
+      - name: Flat library integrity — rebuild-in-memory diff vs disk
+        run: python3 scripts/build_flat_library.py --verify
+      - name: Regenerate clay-svg wrappers from committed PNGs
+        # Proves every committed PNG is a valid image and deterministically
+        # wrappable; the wrappers themselves are not committed (see .gitignore).
+        run: python3 scripts/make_svg_wrappers.py
+      - name: Verify wrapper byte-identity
+        run: python3 scripts/make_svg_wrappers.py --check

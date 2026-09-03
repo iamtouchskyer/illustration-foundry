@@ -74,6 +74,13 @@ No white/transparent variant split: flat SVGs are inherently transparent, so
 the flat catalog is 93 × 8 = **744 SVGs**. Clay and flat are siblings, not
 substitutes — clay carries warmth/texture, flat carries scale/flexibility.
 
+## Cloning
+
+The clay PNGs are stored with **git-lfs** (large binaries stay out of git
+history). With git-lfs installed, a normal `git clone` pulls everything
+automatically; if you cloned without LFS and see pointer files, run
+`git lfs pull`.
+
 ## Usage
 
 ```bash
