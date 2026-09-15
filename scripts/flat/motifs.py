@@ -492,3 +492,86 @@ def laptop(cx, cy, color=None, screen=None):
     base = S.polygon([(cx - 26, cy + 14), (cx + 26, cy + 14),
                       (cx + 21, cy + 8), (cx - 21, cy + 8)], fill=color)
     return [lid, inner, base]
+
+
+# -- clubs ----------------------------------------------------------------
+# Added so a product that illustrates *school clubs* has atoms that say what
+# the club is (art / coffee / science / chess / culture) instead of borrowing
+# a UI-state scene. Geometry follows the same contract as the atoms above:
+# subject band ~y=18..96, caller draws the contact shadow.
+
+def palette(cx, cy, w=48, h=38, color=None, holes=None):
+    """Painter's palette: elliptical body, thumb hole, five paint wells."""
+    els = [S.ellipse(cx, cy, w / 2, h / 2, fill=color)]
+    els.append(S.circle(cx - w * 0.30, cy + h * 0.20, h * 0.13, fill=holes))
+    for dx, dy in ((-0.14, -0.26), (0.04, -0.30), (0.22, -0.20),
+                   (-0.10, 0.02), (0.14, 0.06)):
+        els.append(S.circle(cx + w * dx, cy + h * dy, h * 0.10, fill=holes))
+    return els
+
+
+def coffee(cx, cy, w=30, h=30, color=None, lid=None, steam=None):
+    """Take-away cup: tapered body, lid band, two steam curls."""
+    top, bottom = cy - h / 2, cy + h / 2
+    els = [S.path(f"M{S._n(cx - w * 0.42)} {S._n(top)} "
+                  f"L{S._n(cx - w * 0.30)} {S._n(bottom)} "
+                  f"L{S._n(cx + w * 0.30)} {S._n(bottom)} "
+                  f"L{S._n(cx + w * 0.42)} {S._n(top)} Z", fill=color)]
+    if lid:
+        els.append(S.rect(cx - w * 0.50, top - h * 0.12, w, h * 0.16,
+                          rx=h * 0.07, fill=lid))
+    if steam:
+        for dx in (-w * 0.16, w * 0.16):
+            els.append(S.path(f"M{S._n(cx + dx)} {S._n(top - h * 0.22)} "
+                              f"q{S._n(w * 0.12)} {S._n(-h * 0.12)} 0 {S._n(-h * 0.24)} "
+                              f"q{S._n(-w * 0.12)} {S._n(-h * 0.12)} 0 {S._n(-h * 0.24)}",
+                              stroke=steam, width=2.6, cap="round"))
+    return els
+
+
+def flask(cx, cy, w=36, h=40, color=None, liquid=None):
+    """Conical flask: narrow neck, tapered body, liquid surface."""
+    top, bottom = cy - h / 2, cy + h / 2
+    neck = w * 0.32
+    els = [S.path(f"M{S._n(cx - neck / 2)} {S._n(top)} "
+                  f"L{S._n(cx - w / 2)} {S._n(bottom)} "
+                  f"L{S._n(cx + w / 2)} {S._n(bottom)} "
+                  f"L{S._n(cx + neck / 2)} {S._n(top)} Z", fill=color)]
+    if liquid:
+        inset = w * 0.30
+        els.append(S.path(f"M{S._n(cx - inset)} {S._n(cy + h * 0.08)} "
+                          f"L{S._n(cx - w / 2)} {S._n(bottom)} "
+                          f"L{S._n(cx + w / 2)} {S._n(bottom)} "
+                          f"L{S._n(cx + inset)} {S._n(cy + h * 0.08)} Z",
+                          fill=liquid))
+    return els
+
+
+def chess(cx, cy, s=1.0, color=None, base=None):
+    """Chess knight silhouette on a plinth."""
+    body = S.path(
+        f"M{S._n(cx - 7 * s)} {S._n(cy + 9 * s)} "
+        f"C{S._n(cx - 9 * s)} {S._n(cy - 2 * s)} {S._n(cx - 3 * s)} {S._n(cy - 11 * s)} "
+        f"{S._n(cx + 5 * s)} {S._n(cy - 13 * s)} "
+        f"L{S._n(cx + 3 * s)} {S._n(cy - 5 * s)} "
+        f"C{S._n(cx + 11 * s)} {S._n(cy - 5 * s)} {S._n(cx + 11 * s)} {S._n(cy + 2 * s)} "
+        f"{S._n(cx + 7 * s)} {S._n(cy + 9 * s)} Z",
+        fill=color)
+    plinth = S.rect(cx - 11 * s, cy + 9 * s, 22 * s, 5 * s, rx=2 * s,
+                    fill=base or color)
+    return [plinth, body]
+
+
+def globe(cx, cy, r=17, color=None, line=None, stand=None):
+    """Globe: sphere, two meridians, one parallel, optional stand."""
+    els = [S.circle(cx, cy, r, fill=color)]
+    if line:
+        els.append(S.ellipse(cx, cy, r * 0.98, r * 0.40, fill="none",
+                             stroke=line, width=2.2))
+        els.append(S.ellipse(cx, cy, r * 0.40, r * 0.98, fill="none",
+                             stroke=line, width=2.2))
+        els.append(S.line(cx - r * 0.98, cy, cx + r * 0.98, cy,
+                          stroke=line, width=2.2))
+    if stand:
+        els.append(S.capsule(cx, cy + r * 0.92, cx, cy + r + 7, 5, stand))
+    return els
