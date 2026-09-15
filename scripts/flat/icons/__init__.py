@@ -7,7 +7,7 @@ package covers the clay catalog exactly (fail-closed parity).
 
 from __future__ import annotations
 
-from . import (assessment, auth, billing, community, empty, error,
+from . import (assessment, auth, billing, clubs, community, empty, error,
                gamification, learning, loading, notifications,
                onboarding, success, wellness)
 
@@ -25,4 +25,5 @@ GROUPS: dict[str, dict] = {
     "assessment": assessment.ICONS,
     "billing": billing.ICONS,
     "wellness": wellness.ICONS,
+    "clubs": clubs.ICONS,
 }

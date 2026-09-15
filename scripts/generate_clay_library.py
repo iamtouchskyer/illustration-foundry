@@ -79,6 +79,7 @@ AVOID = ("background scene, room, desk, table surface, floor, props, "
 
 # Parametrized palettes ---------------------------------------------------
 
+
 PALETTES = {
     "terracotta": {
         "PRIMARY": "vivid orange #ff6b35",
@@ -255,6 +256,26 @@ SUBJECTS = {
         "session-complete": "a soft clay lotus flower in {PRIMARY} with {HIGHLIGHT} petals resting on a pale {TERTIARY} ripple, one tiny {SECONDARY} sparkle above it",
     },
 }
+
+
+SUBJECTS["clubs"] = {
+    'art-club': (
+        "a matte clay painter's palette with five shallow paint wells and a brush resting across it, one bold diagonal"
+    ),
+    'coffee-club': (
+        'a matte clay take-away coffee cup with a lid band and two soft steam curls rising above it'
+    ),
+    'science-club': (
+        'a matte clay conical flask with a liquid line and two small bubbles floating up beside the neck'
+    ),
+    'chess-club': (
+        'a matte clay chess knight standing on a low plinth over a flat board square, one readable silhouette'
+    ),
+    'culture-club': (
+        'a matte clay globe with two meridian lines and a small pennant flag beside it'
+    ),
+}
+
 
 
 def palette_line(palette: dict[str, str]) -> str:
